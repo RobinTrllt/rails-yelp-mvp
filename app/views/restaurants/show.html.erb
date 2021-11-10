@@ -1,0 +1,26 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <div class="description">
+    <h3><%= @restaurant.category %></h3>
+    <h3><%= @restaurant.address %></h3>
+    <h3><%= @restaurant.phone_number %></h3>
+  </div>
+  <div class="reviews">
+    <ul class="list-group">
+    <h2>Reviews</h2>
+    <%= link_to("Write a review", new_restaurant_review_path(@restaurant)) %>
+    <% @restaurant.reviews.each do |review| %>
+      <li class="review"><%= review.content %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <span id="edit"><%= link_to("Edit this restaurant", edit_restaurant_path) %></span>
+    <span id="delete"><%= link_to "Delete #{@restaurant.name}",
+                restaurant_path(@restaurant),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></span>
+    <span id="back"><%= link_to("Back to Restaurants", restaurants_path) %></span>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.reviews{
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 700px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px grey;
+}
+
+body {
+  background-color: rgb(218, 218, 218);
+}
+
+.restaurant-display {
+  background-color: rgb(238, 237, 237);
+  margin: 15px 0px;
+  padding: 10px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-radius: 15px;
+}
+
+.description {
+  background-color: rgb(238, 237, 237);
+  margin: 10px 0px;
+  padding: 10px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-radius: 15px;
+  line-height: 20px;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.restaurant-name {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#edit, #delete, #back, #submit {
+  padding: 10px 30px;
+  margin: 15px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(228, 228, 228);
+}
